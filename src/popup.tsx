@@ -1,20 +1,17 @@
-import { useState } from "react"
+import React from "react"
+
+import "./style.css"
+
+import { TabsDemo } from "~TabsDemo"
+
+// import { TabsDemo } from "~TabsDemo"
+
+import HexColorPicker from "./HexColorPicker"
 
 function IndexPopup() {
-  const [data, setData] = useState("")
-
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        padding: 16
-      }}>
-      <h1>
-        Welcome to your <a href="https://www.plasmo.com">Plasmo</a> Extension!
-      </h1>
-      <input onChange={(e) => setData(e.target.value)} value={data} />
-      <footer>Crafted by @PlasmoHQ</footer>
+    <div className="p-4 bg-secondary dark min-w-[412px] h-[402px] p-12 bg-gray-100 flex flex-col items-center justify-center  shadow-lg">
+      <TabsDemo />
     </div>
   )
 }
